@@ -17,7 +17,7 @@ public class MainManager : MonoBehaviour
     private int m_Points;
     
     private bool m_GameOver = false;
-
+    public GameObject MainMenuManager;
     
     // Start is called before the first frame update
     void Start()
@@ -53,6 +53,7 @@ public class MainManager : MonoBehaviour
                 Ball.AddForce(forceDir * 2.0f, ForceMode.VelocityChange);
             }
         }
+
         else if (m_GameOver)
         {
             if (Input.GetKeyDown(KeyCode.Space))
